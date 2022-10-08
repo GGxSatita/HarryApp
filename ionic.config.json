@@ -1,0 +1,7 @@
+{
+  "name": "HarryApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
