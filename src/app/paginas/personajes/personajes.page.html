@@ -30,7 +30,7 @@
 
   <ng-template #losDatos>
     <app-info-personaje
-    *ngForm="let info of obtenerPersonaje.informaciones"
+    *ngFor="let info of obtenerPersonaje.informaciones"
     [url]="info.url"
     >
     </app-info-personaje>
