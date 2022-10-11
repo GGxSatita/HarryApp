@@ -13,14 +13,17 @@ export class ObtenerPersonajeService {
   constructor(
     private client: HttpClient
   ){}
-  public obtener10primeros(){
-    this.client.get<ResultadoPeticion>(this.url).subscribe(peticion => {
+  public obtener20primeros(){
+    this.client.get<ResultadoPeticion>(this.url)
+    .subscribe(peticion => {
       this.resultado = peticion
+      console.log(peticion);
       this.informaciones.push(...peticion.results);
     });
   }
   public obetenerMasPersonajes(){
-    return this.client.get<ResultadoPeticion>(this.resultado.next).subscribe(peticion => {
+    return this.client.get<ResultadoPeticion>(this.resultado.next)
+    .subscribe(peticion => {
       this.resultado = peticion;
       this.informaciones.push(...peticion.results);
     });

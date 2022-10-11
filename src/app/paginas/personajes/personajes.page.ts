@@ -30,7 +30,7 @@ export class PersonajesPage implements OnInit {
       ])
     });
 
-    this.obtenerPersonaje.obtener10primeros();
+    this.obtenerPersonaje.obtener20primeros();
 
   }
   public cargarMasPersonajes(event : Event): void{
